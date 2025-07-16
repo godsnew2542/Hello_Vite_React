@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../App.css";
-import { CounterProvider, userConter } from "../CounterProvider";
+import { CounterProvider, userConter } from "../Utils/CounterProvider";
 
 interface CounterProps {
   count: number;
