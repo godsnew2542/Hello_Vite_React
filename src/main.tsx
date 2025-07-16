@@ -6,7 +6,8 @@ import Day2 from "./page/Day2.tsx";
 import Day3 from "./page/Day3.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+  <>
+    {/* <StrictMode> */}
     {/* <App />
     <br />
     <hr />
@@ -15,5 +16,6 @@ createRoot(document.getElementById("root")!).render(
     <br />
     <hr /> */}
     <Day3 />
-  </StrictMode>
+    {/* </StrictMode> */}
+  </>
 );
