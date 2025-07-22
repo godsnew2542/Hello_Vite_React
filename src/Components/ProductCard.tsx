@@ -1,4 +1,5 @@
 import { formatCurrency } from "../api/SourceData";
+import { useCart } from "../Context/CartContext";
 import type { Product } from "../type/type";
 
 type ProductCardProps = Product & {
@@ -12,7 +13,10 @@ export function ProductCard({
   price,
   onAddToCart,
 }: ProductCardProps) {
+  const { addToCart } = useCart();
+
   const handleClick = () => {
+    addToCart({ image, name, description, price });
     onAddToCart({
       image,
       name,

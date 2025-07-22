@@ -7,6 +7,8 @@ import { CartItem } from "../Components/CartItem";
 import { CartActions } from "../Components/CartActions";
 import { sourceProducts } from "../api/SourceData";
 import { useState } from "react";
+import { useCart } from "../Context/CartContext";
+import { CartItemCard } from "../Components/CartItemCard";
 
 export default function Day3() {
   const products: Product[] = sourceProducts();
@@ -71,6 +73,8 @@ export default function Day3() {
     }
   };
 
+  const { cartItems } = useCart();
+
   return (
     <>
       <div className="app-container">
@@ -97,6 +101,10 @@ export default function Day3() {
             <CartSummary {...itemCards} />
 
             <div className="cart-items">
+              {cartItems.map((item, index) => (
+                <CartItemCard key={index} {...item} />
+              ))}
+              <hr />
               {itemCards.map((item, index) => (
                 <CartItem
                   key={index}
