@@ -12,26 +12,6 @@ export default function Day3() {
   const products: Product[] = sourceProducts();
 
   const [itemCards, setCart] = useState<ItemCard[]>([]);
-  // const itemCards: ItemCard[] = [
-  //   {
-  //     image: "📱📱",
-  //     name: "iPhone 15 Pro",
-  //     price: 999.0,
-  //     quantity: 1,
-  //   },
-  //   {
-  //     image: "🎧🎧",
-  //     name: "AirPods Pro",
-  //     price: 249.0,
-  //     quantity: 1,
-  //   },
-  //   {
-  //     image: "⌚⌚",
-  //     name: "Apple Watch Series 9",
-  //     price: 299.0,
-  //     quantity: 1,
-  //   },
-  // ];
 
   const handleAddToCart = (product: Product) => {
     setCart((prevCart) => {
